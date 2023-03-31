@@ -6,17 +6,27 @@ import loadMenu from './menu.js';
 import loadContact from './contact.js';
 import clearContent from './functions/clear.js';
 
-document.body.appendChild(loadNav());
-loadHome();
+// document.body.appendChild(loadNav());
 
-function init() {
+function home() {
+  clearContent();
+  loadNav();
+  loadHome();
+}
+
+home();
+
+function eventListeners() {
+  const body = document.querySelector('#content');
   const homeBtn = document.querySelector('#home');
   const menuBtn = document.querySelector('#menu');
   const contactBtn = document.querySelector('#contact');
 
-  homeBtn.addEventListener('click', loadHome);
-  menuBtn.addEventListener('click', loadMenu);
-  contactBtn.addEventListener('click', loadContact);
+  homeBtn.addEventListener('click', home);
+  menuBtn.addEventListener('click', menu);
+  contactBtn.addEventListener('click', contact);
+
+  return { body };
 }
 
-init();
+eventListeners();

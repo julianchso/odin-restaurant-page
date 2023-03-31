@@ -1,11 +1,12 @@
-import clearContent from './functions/clear.js';
-
 function loadNav() {
   const nav = document.createElement('nav');
+  const navBtnContainer = document.createElement('div');
 
   const home = document.createElement('button');
   const menu = document.createElement('button');
   const contact = document.createElement('button');
+
+  const body = document.querySelector('#content');
 
   home.id = 'home';
   menu.id = 'menu';
@@ -15,15 +16,26 @@ function loadNav() {
   menu.classList.add('navBtn');
   contact.classList.add('navBtn');
 
+  home.classList.add('font-family');
+  menu.classList.add('font-family');
+  contact.classList.add('font-family');
+
+  home.classList.add('active');
+  navBtnContainer.classList.add('navBtnContainer');
+
   home.textContent = 'HOME';
   menu.textContent = 'MENU';
   contact.textContent = 'CONTACT';
 
-  nav.appendChild(home);
-  nav.appendChild(menu);
-  nav.appendChild(contact);
+  navBtnContainer.appendChild(home);
+  navBtnContainer.appendChild(menu);
+  navBtnContainer.appendChild(contact);
 
-  return nav;
+  nav.appendChild(navBtnContainer);
+
+  body.appendChild(nav);
+
+  return body;
 }
 
 export default loadNav;
