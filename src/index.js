@@ -1,6 +1,6 @@
 import './nav.js';
 import './styles/main.scss';
-import loadNav from './nav.js';
+import { loadNav } from './nav.js';
 import loadHome from './home.js';
 import loadMenu from './menu.js';
 import loadContact from './contact.js';
