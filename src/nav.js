@@ -7,6 +7,8 @@ function loadNav() {
   const contact = document.createElement('button');
 
   const body = document.querySelector('#content');
+  const content = document.querySelector('#content');
+  const background = document.createElement('div');
 
   home.id = 'home';
   menu.id = 'menu';
@@ -34,6 +36,9 @@ function loadNav() {
   nav.appendChild(navBtnContainer);
 
   body.appendChild(nav);
+
+  background.classList.add('background');
+  content.appendChild(background);
 
   return body;
 }

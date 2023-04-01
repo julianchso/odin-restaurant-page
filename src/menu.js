@@ -1,5 +1,7 @@
 import clearContent from './functions/clear.js';
 
-function loadMenu() {}
+function loadMenu() {
+  console.log('click on menu');
+}
 
 export default loadMenu;

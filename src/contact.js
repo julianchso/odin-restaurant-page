@@ -1,3 +1,5 @@
-function createContact() {}
+function loadContact() {
+  console.log('click on contact');
+}
 
-export default createContact;
+export default loadContact;
