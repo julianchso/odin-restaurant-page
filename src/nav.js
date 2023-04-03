@@ -2,17 +2,19 @@ function loadNav() {
   const nav = document.createElement('nav');
   const navBtnContainer = document.createElement('div');
 
+  // TODO: create DOM elements using loop
+  // const btns = ['homeBtn', 'menuBtn', 'contactBtn'];
+
+  // btns.forEach((btn) => {
+  //   btn = document.createElement('button');
+  //   btn.classList.add('navBtn');
+  //   btn.classList.add('font-family');
+  //   navBtnContainer.append(btn);
+  // });
+
   const homeBtn = document.createElement('button');
   const menuBtn = document.createElement('button');
   const contactBtn = document.createElement('button');
-
-  const body = document.querySelector('#content');
-  const content = document.querySelector('#content');
-  const background = document.createElement('div');
-
-  homeBtn.id = 'home';
-  menuBtn.id = 'menu';
-  contactBtn.id = 'contact';
 
   homeBtn.classList.add('navBtn');
   menuBtn.classList.add('navBtn');
@@ -21,6 +23,12 @@ function loadNav() {
   homeBtn.classList.add('font-family');
   menuBtn.classList.add('font-family');
   contactBtn.classList.add('font-family');
+
+  const body = document.querySelector('body');
+
+  homeBtn.id = 'home';
+  menuBtn.id = 'menu';
+  contactBtn.id = 'contact';
 
   homeBtn.classList.add('active');
   navBtnContainer.classList.add('navBtnContainer');
@@ -35,10 +43,9 @@ function loadNav() {
 
   nav.appendChild(navBtnContainer);
 
-  body.appendChild(nav);
+  body.insertAdjacentElement('afterbegin', nav);
 
-  background.classList.add('background');
-  content.appendChild(background);
+  // body.appendChild(content);
 
   return body;
 }

@@ -15,10 +15,6 @@ const eventListeners = (() => {
   const menuBtn = document.querySelector('#menu');
   const contactBtn = document.querySelector('#contact');
 
-  // homeBtn.addEventListener('click', home);
-  // menuBtn.addEventListener('click', menu);
-  // contactBtn.addEventListener('click', contact);
-
   document.addEventListener('click', (e) => {
     const target = e.target.innerText;
 

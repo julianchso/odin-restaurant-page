@@ -130,16 +130,19 @@ table {
 
 // ** CSS reset end ** //
 
-body {
-  font-family: 'montserrat', Arial, Helvetica, sans-serif;
-}
-
-.background {
-  background-image: url('../assets/background.jpeg');
+#content {
+  display: flex;
   height: 100vh;
   width: 100vw;
-  opacity: 0.5;
+  font-family: 'montserrat', Arial, Helvetica, sans-serif;
+  background-image: url('../assets/background.jpeg');
+  align-items: center;
+  justify-content: center;
 }
+
+// .opacity-50 {
+//   opacity: 0.5;
+// }
 
 button {
   cursor: pointer;
@@ -172,7 +175,7 @@ nav {
   color: #fff;
 }
 
-.font-family {
+.main-font {
   font-family: 'montserrat', Arial, Helvetica, sans-serif;
 }
 
@@ -182,4 +185,12 @@ nav {
 
 .active {
   border-bottom: solid 3px #806a0d;
+}
+
+h1 {
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 60px;
+  color: #fff;
 }
