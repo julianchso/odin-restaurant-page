@@ -1,7 +1,7 @@
 import clearContent from './functions/clear.js';
 
 function loadHome() {
-  const mainContent = document.createElement('main');
+  const main = document.createElement('main');
   const header = document.createElement('h1');
   const subtext = document.createElement('p');
 
@@ -17,8 +17,8 @@ function loadHome() {
   header.innerText = 'Welcome';
   header.classList.add = 'main-font';
 
-  content.appendChild(mainContent);
-  mainContent.appendChild(header);
+  content.appendChild(main);
+  main.appendChild(header);
 }
 
 export default loadHome;

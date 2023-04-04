@@ -130,14 +130,19 @@ table {
 
 // ** CSS reset end ** //
 
-#content {
+main {
   display: flex;
   height: 100vh;
   width: 100vw;
   font-family: 'montserrat', Arial, Helvetica, sans-serif;
-  background-image: url('../assets/background.jpeg');
   align-items: center;
   justify-content: center;
+}
+
+#content {
+  background-image: url('../assets/background.jpeg');
+  height: 100vh;
+  width: 100vw;
 }
 
 // .opacity-50 {
@@ -193,4 +198,8 @@ h1 {
   margin: 0 auto;
   font-size: 60px;
   color: #fff;
+}
+
+.menuContainer {
+  display: grid;
 }
