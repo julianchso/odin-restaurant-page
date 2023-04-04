@@ -10,29 +10,37 @@ function loadMenu() {
 
   const menuContainer = document.createElement('div');
   menuContainer.classList.add('menuContainer');
-  // content.appendChild(menuContainer);
 
-  for (let i = 0; i < 3; i++) {
-    const item = document.createElement('div');
-    const image = document.createElement('img');
-    const name = document.createElement('span');
-    const price = document.createElement('span');
+  menuContainer.appendChild(createMenuItem('asdf', 'steak', '$25.99'));
+  menuContainer.appendChild(createMenuItem('asdf', 'fish', '$22.99'));
+  menuContainer.appendChild(createMenuItem('asdf', 'salad', '$12.99'));
 
-    item.classList.add('menu-item');
-    image.classList.add('menu-item-image');
-    name.classList.add('menu-item-name');
-    price.classList.add('menu-item-price');
-
-    item.id = `menu-item-${i}`;
-
-    item.appendChild(image);
-    item.appendChild(name);
-    item.appendChild(price);
-
-    menuContainer.appendChild(item);
-    console.log(`loop: ${i}`);
-  }
   content.appendChild(menuContainer);
+}
+
+function createMenuItem(imageSrc, name, price) {
+  const foodGroup = document.createElement('div');
+  foodGroup.classList.add('menu-item');
+
+  const foodImage = document.createElement('img');
+  foodImage.classList.add('menu-item-image');
+  // imageSrc.src = `./assets/${imageSrc}`;
+
+  const foodName = document.createElement('span');
+  foodName.textContent = name;
+  foodName.classList.add('menu-item-name');
+
+  const foodPrice = document.createElement('span');
+  foodPrice.textContent = price;
+  foodPrice.classList.add('menu-item-price');
+
+  foodGroup.appendChild(foodImage);
+  foodGroup.appendChild(foodName);
+  foodGroup.appendChild(foodPrice);
+
+  console.log(foodGroup);
+
+  return foodGroup;
 }
 
 export default loadMenu;
